@@ -106,7 +106,6 @@ export default function Features() {
                 <div className="w-full md:w-1/2 flex justify-center">
                   <div className="relative">
                     {/* Phone Frame */}
-                    <div className="relative bg-gray-300 rounded-[2.5rem] p-2 shadow-2xl">
                       <div className="bg-black rounded-[1rem] overflow-hidden">
                         <Image
                           src={feature.image || "/placeholder.svg"}
@@ -116,7 +115,6 @@ export default function Features() {
                           className="rounded-xl object-contain w-full h-auto"
                         />
                       </div>
-                    </div>
 
                     {/* Floating Icon */}
                     <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg">
