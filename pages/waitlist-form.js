@@ -74,7 +74,7 @@ export default function WaitlistForm() {
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Welcome to the Waitlist!</h2>
             <p className="text-gray-600 mb-8">
-              Thank you for joining CampusConnect! We'll notify you as soon as we launch. Get ready to revolutionize
+              Thank you for joining CampusConnect! We&apos;ll notify you as soon as we launch. Get ready to revolutionize
               your campus experience.
             </p>
             <Link
