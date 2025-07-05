@@ -24,6 +24,7 @@ export default function WaitlistForm() {
     year: "",
     course: "",
     branch: "",
+    rollNumber: "",
     reason: "",
     feedback: "",
   });
@@ -310,6 +311,25 @@ export default function WaitlistForm() {
                     placeholder="e.g., Computer Science, Mechanical, Business"
                   />
                 </div>
+              </div>
+              {/* Roll Number */}
+              <div>
+                <label
+                  htmlFor="rollNumber"
+                  className="block text-sm font-medium text-gray-700 mb-2 transition-colors duration-300"
+                >
+                  Roll Number <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="rollNumber"
+                  name="rollNumber"
+                  required
+                  value={formData.rollNumber}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white  text-gray-900  placeholder-gray-500 transition-all duration-300"
+                  placeholder="e.g., 23BCS101"
+                />
               </div>
             </div>
 

@@ -9,10 +9,15 @@ const WaitlistSchema = new mongoose.Schema(
     year: String,
     course: String,
     branch: String,
+    rollNumber: String,
     reason: String,
     feedback: String,
   },
   { timestamps: true }
 );
 
-export default mongoose.models.Waitlist || mongoose.model("Waitlist", WaitlistSchema);
+// Add compound unique index
+WaitlistSchema.index({ college: 1, rollNumber: 1 }, { unique: true });
+
+export default mongoose.models.Waitlist ||
+  mongoose.model("Waitlist", WaitlistSchema);
