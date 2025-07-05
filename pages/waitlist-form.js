@@ -197,6 +197,8 @@ export default function WaitlistForm() {
                     id="phone"
                     name="phone"
                     required
+                    minLength={10}
+                    maxLength={10}
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-r-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-gray-900 placeholder-gray-500 transition-all duration-300"
