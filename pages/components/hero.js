@@ -1,4 +1,5 @@
-import { ArrowRight, Users, Calendar, Zap } from "lucide-react"
+import { ArrowRight, Users, Calendar, Zap } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -28,47 +29,25 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            The ultimate platform for campus networking. Discover events, join hackathons, connect with like-minded
-            students, and build your professional network.
+            The ultimate platform for campus networking. Discover events, join
+            hackathons, connect with like-minded students, and build your
+            professional network.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center">
-              Join Waitlist
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
+            <Link href="/waitlist-form">
+              <button className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center">
+                Join Waitlist
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+            {/* <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300">
               Learn More
-            </button>
+            </button> */}
           </div>
-
-          {/* Stats */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Users className="w-8 h-8 text-blue-600" />
-              </div>
-              <div className="text-2xl font-bold text-gray-900">10K+</div>
-              <div className="text-gray-600">Students Ready</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Calendar className="w-8 h-8 text-purple-600" />
-              </div>
-              <div className="text-2xl font-bold text-gray-900">500+</div>
-              <div className="text-gray-600">Events Planned</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Zap className="w-8 h-8 text-pink-600" />
-              </div>
-              <div className="text-2xl font-bold text-gray-900">50+</div>
-              <div className="text-gray-600">Universities</div>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
-  )
+  );
 }
